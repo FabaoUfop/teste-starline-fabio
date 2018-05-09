@@ -7,35 +7,38 @@ O projeto será desenvolvido utilizando a linguagem Python 3.6.0 com Django e a 
 
 Para instalar o virtualenvwrapper/criar o ambiente :
 
-$ pip install virtualenvwrapper
+#$ pip install virtualenvwrapper
 
 Configure o arquivo .bashrc :
 
-$ export WORKON_HOME=~/.virtualenvs
-$ source /usr/local/bin/virtualenvwrapper.sh
+#$ export WORKON_HOME=~/.virtualenvs
+#$ source /usr/local/bin/virtualenvwrapper.sh
 
 Para criar um virtualenvs basta usar o comando :
-$ mkvirtualenv (nome da virtualenv)
+#$ mkvirtualenv (nome da virtualenv)
 
 Para criar uma virtualenv diferente do seu sistema (default) basta passar o parametro da versao do Python
 que serea utilizada:
 
-mkvirtualenv teste_py3 --python=/usr/local/bin/python3.6.0 (versao utilizada neste teste)
+# mkvirtualenv teste_py3 --python=/usr/local/bin/python3.6.0 (versao utilizada neste teste)
 
 Para acessar a virtualenv criada basta utilizar o comando :
 
-$workon (nome da virtualenv)
+#$workon (nome da virtualenv)
 
 Você precisa agora instalar as dependências utilizadas neste projeto:
-$ pip install django
-pip install djangorestframework
-pip install markdown       # Markdown support for the browsable API.
-pip install django-filter  # Filtering support
+
+#$ pip install django
+#$ pip install djangorestframework
+#$ pip install markdown       # Markdown support for the browsable API.
+#$ pip install django-filter  # Filtering support
 
 Para executar o projeto basta digitar o comando runserver dentro no arquivo manage.py:
 
-./manage.py runserver
+#./manage.py runserver
 
+Por padrão ele ira rodar em :
+http://127.0.0.1:8000
 
 Links para referencia :
 
