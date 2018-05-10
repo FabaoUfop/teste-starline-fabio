@@ -16,17 +16,17 @@ TIPO = (
 OPCOES = ( ('A',u'a'),
            ('B',u'b'),
            ('C',u'c'),
-           ('C',u'd'),
+           ('D',u'd'),
         )
 class Questao(models.Model):
 
     questao_id = models.AutoField(primary_key=True)
-    usuario_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     questao_area = models.CharField(max_length=1,choices=AREA)
     questao_disciplina = models.CharField(max_length=40)
-    questao_pergunta = models.CharField(max_length=40)
+    questao_pergunta = models.CharField(max_length=100)
     questao_tipo = models.CharField(max_length=1, choices=TIPO)
-    questao_objetiva = models.TextField(max_length=1,choices=OPCOES,null=True)
+    questao_objetiva = models.CharField(max_length=1,choices=OPCOES,null=True)
     questao_discursiva = models.TextField(max_length=100,null=True)
 
 #lista questoes pelo filtro de perguntas
