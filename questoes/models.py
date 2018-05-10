@@ -35,8 +35,11 @@ class Questao(models.Model):
         ordering = ["questao_pergunta"]
         verbose_name = u'Questao'
 
+#lista as questoes pelo campo pertunta
+
     def __str__(self):
         return self.questao_pergunta
+
 
 #classe com os dados de usuario
 
