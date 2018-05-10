@@ -13,15 +13,26 @@
 .jumbotron {
     background-color: #f6f6f6;; /* Orange */
 }
+a {
+	position: absolute;
+	left: 40%; /* posiciona a 90px para a esquerda */
+	top: 30%; /* posiciona a 70px para baixo */
+	}
 /* Absolute Center Spinner */
 </style>
 </head>
-
       <body>
         <div class="jumbotron">
-        <h1>Sistema de Questoes</h1>
+          <h1>Sistema de Questoes</h1>
         </div>
+
         {% block content %}
+        <div class="col-md 4">
+          <a type="button" href="/admin" class="btn btn-primary btn-lg">Add questao</a>
+        </div>
+
+      </div>
+        </div>
           <table class="table">
             <thead>
               <th>Usuario</th>
@@ -38,7 +49,7 @@
               {% endfor %}
             </tbody>
           </table>
+
           {% endblock %}
       </body>
-
     </html>
