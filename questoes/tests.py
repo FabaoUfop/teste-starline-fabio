@@ -14,7 +14,7 @@ class ModelTestCase(TestCase):
         self.questaolist = QuestaoList(name=self.questaolist_name)
 
     def test_model_can_create_a_bucketlist(self):
-        """Testa a bucketlist na model Questao na criação da lista de perguntas."""
+        """Testa a bucketlist na model Questao na criação da lista de perguntas(quantidade)."""
 
         old_count = QuestaoList.objects.count()
         self.questaolist.save()

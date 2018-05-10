@@ -56,10 +56,3 @@ http://127.0.0.1:8000
 Links para referencia :
 
 http://www.django-rest-framework.org/
-
-
-No front end o foi utilizado o Vue.JS framework .
-
-https://vuejs.org/
-
-Executando o projeto.
