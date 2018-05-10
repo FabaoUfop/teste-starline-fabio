@@ -26,13 +26,13 @@ $workon (nome da virtualenv)
 
 Você precisa agora instalar as dependências utilizadas neste projeto:
 
-+$ pip install django
+$ pip install django
 
-+$ pip install djangorestframework
+$ pip install djangorestframework
 
-+$ pip install markdown       # Markdown support for the browsable API.
+$ pip install markdown       # Markdown support for the browsable API.
 
-+$ pip install django-filter  # Filtering support
+$ pip install django-filter  # Filtering support
 
 Agora você deve clonar o repositorio e seguir os comandos abaixo:
 
