@@ -7,7 +7,7 @@ O projeto será desenvolvido utilizando a linguagem Python 3.6.0 com Django e a 
 
 Para instalar o virtualenvwrapper/criar o ambiente :
 
-#$ pip install virtualenvwrapper
+$ pip install virtualenvwrapper
 
 Configure o arquivo .bashrc :
 
@@ -41,9 +41,9 @@ Para persistir os dados é necessario gerar as tabelas no db sqlite3(padrão usa
 
 $ python manage.py migrate
 
-SuperUser
-login:fabio
-senha :fab123456
+Para criar um superusuario para login no django-admin digite o comando :
+
+$ python manage.py  createsuperuser
 
 Para executar o projeto basta digitar o comando runserver dentro no arquivo manage.py:
 
