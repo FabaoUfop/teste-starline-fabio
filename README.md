@@ -33,25 +33,23 @@ $ pip install djangorestframework
 $ pip install markdown       # Markdown support for the browsable API.
 $ pip install django-filter  # Filtering support
 
-Também é necessario setar o requirements com o comando abaixo:
+Agora você deve clonar o repositorio e seguir os comandos abaixo:
 
-$pip install -r requirements.txt
-
-Para persistir os dados é necessario gerar as tabelas no db sqlite3(padrão usado no projeto):
-
+$git clone https://github.com/FabaoUfop/teste-starline-fabio.git
+$ virtualenv --python=`which python3` venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ cd teste-starline-fabio
 $ python manage.py migrate
-
-Para criar um superusuario para login no django-admin digite o comando :
-
-$ python manage.py  createsuperuser
-
-Para executar o projeto basta digitar o comando runserver dentro no arquivo manage.py:
-
-./manage.py runserver ou
 $ python manage.py runserver
 
 Por padrão ele ira rodar em :
 http://127.0.0.1:8000
+Nesta páǵina será exibido uma lista de questoes por usuario e o tipo de questão (Objetiva ou Discursiva)
+Como foi adotado o django-admin , para realizar operações CRUD para questoes basta acessar:
+http://127.0.0.1:8000/admin (interface base)
+ou
+http://127.0.0.1:8000/app (interface rest)
 
 Links para referencia :
 

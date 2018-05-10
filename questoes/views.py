@@ -6,6 +6,10 @@ from .serializers import QuestaoSerializer, UserSerializer
 
 # Create your views here
 
+def index(request):
+    questoes = Questao.objects.all()
+    return render(request, 'questoes/index.html', {'questoes':questoes} )
+
 class QuestaoView (viewsets.ModelViewSet):
     queryset = Questao.objects.all()
     serializer_class = QuestaoSerializer

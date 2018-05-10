@@ -1,12 +1,14 @@
 from django.urls import path, include
+from django.conf.urls import url
 from . import views
 from rest_framework import routers
+import requests
 
 router = routers.DefaultRouter()
-
-router.register('Questoes', views.QuestaoView)
-router.register('User', views.UserView)
+router.register('questoes', views.QuestaoView)
+router.register('user', views.UserView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('app/', include(router.urls)),
+    url(r'^$', views.index, name="index"),
 ]

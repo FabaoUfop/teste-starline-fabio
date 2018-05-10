@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang=”en”>
+  <head>
+    <meta charset=”utf-8">
+ <title>Sistema de Questoes</title>
+ <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+ <meta name=”description” content=”Um sistema de gestao de questoes”>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+.jumbotron {
+    background-color: #f6f6f6;; /* Orange */
+}
+/* Absolute Center Spinner */
+</style>
+</head>
+
+      <body>
+        <div class="jumbotron">
+        <h1>Sistema de Questoes</h1>
+        </div>
+        {% block content %}
+          <table class="table">
+            <thead>
+              <th>Usuario</th>
+              <th>Questao</th>
+              <th>Tipo</th>
+            </thead>
+            <tbody>
+              {% for questao in questoes %}
+                <tr>
+                  <td>{{ questao.usuario }}</td>
+                  <td>{{ questao.questao_pergunta }}</td>
+                  <td>{{questao.questao_tipo}}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endblock %}
+      </body>
+
+    </html>
