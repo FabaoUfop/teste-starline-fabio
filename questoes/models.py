@@ -21,13 +21,13 @@ OPCOES = ( ('A',u'a'),
 class Questao(models.Model):
 
     questao_id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     questao_area = models.CharField(max_length=1,choices=AREA)
     questao_disciplina = models.CharField(max_length=40)
-    questao_pergunta = models.CharField(max_length=100)
+    questao_pergunta = models.TextField(max_length=100)
     questao_tipo = models.CharField(max_length=1, choices=TIPO)
-    questao_objetiva = models.CharField(max_length=1,choices=OPCOES,null=True)
-    questao_discursiva = models.TextField(max_length=100,null=True)
+    questao_objetiva = models.CharField(max_length=1,choices=OPCOES,null=True, blank=True)
+    questao_discursiva = models.TextField(max_length=100,null=True, blank=True)
 
 #lista questoes pelo filtro de perguntas
 
@@ -36,7 +36,7 @@ class Questao(models.Model):
         verbose_name = u'Questao'
 
     def __str__(self):
-        return self.pergunta
+        return self.questao_pergunta
 
 #classe com os dados de usuario
 
