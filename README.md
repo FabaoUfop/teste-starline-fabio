@@ -26,6 +26,7 @@ $workon (nome da virtualenv)
 
 Você precisa agora instalar as dependências utilizadas neste projeto:
 
+<<<<<<< HEAD
 +$ pip install django
 
 +$ pip install djangorestframework
@@ -33,6 +34,15 @@ Você precisa agora instalar as dependências utilizadas neste projeto:
 +$ pip install markdown       # Markdown support for the browsable API.
 
 +$ pip install django-filter  # Filtering support
+=======
+$ pip install django
+
+$ pip install djangorestframework
+
+$ pip install markdown       # Markdown support for the browsable API.
+
+$ pip install django-filter  # Filtering support
+>>>>>>> de32e126607f61105e4c740ab5143879d5ea0554
 
 Agora você deve clonar o repositorio e seguir os comandos abaixo:
 
@@ -50,6 +60,10 @@ $ python manage.py migrate
 
 $ python manage.py runserver
 
+<<<<<<< HEAD
+=======
+## Como inteiragir com o programa:
+>>>>>>> de32e126607f61105e4c740ab5143879d5ea0554
 
 Por padrão ele ira rodar em :
 
