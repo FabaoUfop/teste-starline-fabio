@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
 
-from .models import Questao,User
-from .serializers import QuestaoSerializer, UserSerializer
+from .models import Questao
+from .serializers import QuestaoSerializer
 
 from django.http import HttpResponse
 
@@ -16,11 +16,8 @@ def questoes(request):
     questoes = serialize("json", Questao.objects.all())
     return HttpResponse(questoes, content_type="application/json")
 
+
 class QuestaoView (viewsets.ModelViewSet):
     queryset = Questao.objects.all()
     serializer_class = QuestaoSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-class UserView (viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer

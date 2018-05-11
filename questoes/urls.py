@@ -6,7 +6,6 @@ import requests
 
 router = routers.DefaultRouter()
 router.register('questoes', views.QuestaoView)
-router.register('user', views.UserView)
 
 urlpatterns = [
     path('app/', include(router.urls)),

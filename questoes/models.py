@@ -4,14 +4,15 @@ from django.contrib.auth.models import User
 #Model de questoes , ela possui relaçao 1:N com usuario
 
 
-AREA = ( ('M',u'Medicas'),
-         ('H',u'Humanas'),
-         ('E',u'Exatas'),
-         ('G',u'Gerenciais'),
-        )
+
+
 TIPO = (
-        ('O',u'Objetiva'),
+        ('MB',u'Multipla Escolha'),
         ('D',u'Discursiva'),
+        )
+ENSINO = ( ('ES',u'Ensino Superior'),
+         ('EB',u'Ensino (Fundamental e Médio)'),
+         ('ET',u'Ensino Técnico'),
         )
 OPCOES = ( ('A',u'a'),
            ('B',u'b'),
@@ -22,32 +23,18 @@ class Questao(models.Model):
 
     questao_id = models.AutoField(primary_key=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    questao_area = models.CharField(max_length=1,choices=AREA)
+    tipo_questao = models.CharField(max_length=2, choices=TIPO)
+    questao_ensino = models.CharField(max_length=2,choices=ENSINO)
     questao_disciplina = models.CharField(max_length=40)
-    questao_pergunta = models.TextField(max_length=100)
-    questao_tipo = models.CharField(max_length=1, choices=TIPO)
+    questao_enunciado = models.TextField(max_length=100)
     questao_objetiva = models.CharField(max_length=1,choices=OPCOES,null=True, blank=True)
     questao_discursiva = models.TextField(max_length=100,null=True, blank=True)
 
 #lista questoes pelo filtro de perguntas
 
     class Meta:
-        ordering = ["questao_pergunta"]
+        ordering = ["questao_enunciado"]
         verbose_name = u'Questao'
-
-#lista as questoes pelo campo pertunta
 
     def __str__(self):
         return self.questao_pergunta
-
-
-#classe com os dados de usuario
-
-class User(models.Model):
-    user_id = models.AutoField(primary_key=True)
-    user_nome = models.CharField(max_length= 255)
-    user_email = models.EmailField(max_length= 75)
-
-    def __init__(self, arg):
-        super(User, self).__init__()
-        self.arg = arg

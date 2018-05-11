@@ -26,15 +26,6 @@ $workon (nome da virtualenv)
 
 Você precisa agora instalar as dependências utilizadas neste projeto:
 
-<<<<<<< HEAD
-+$ pip install django
-
-+$ pip install djangorestframework
-
-+$ pip install markdown       # Markdown support for the browsable API.
-
-+$ pip install django-filter  # Filtering support
-=======
 $ pip install django
 
 $ pip install djangorestframework
@@ -42,9 +33,8 @@ $ pip install djangorestframework
 $ pip install markdown       # Markdown support for the browsable API.
 
 $ pip install django-filter  # Filtering support
->>>>>>> de32e126607f61105e4c740ab5143879d5ea0554
 
-Agora você deve clonar o repositorio e seguir os comandos abaixo:
+##Agora você deve clonar o repositorio e seguir os comandos abaixo:
 
 $git clone (https://github.com/FabaoUfop/teste-starline-fabio.git)
 
@@ -60,25 +50,6 @@ $ python manage.py migrate
 
 $ python manage.py runserver
 
-<<<<<<< HEAD
-=======
 ## Como inteiragir com o programa:
->>>>>>> de32e126607f61105e4c740ab5143879d5ea0554
-
-Por padrão ele ira rodar em :
-
-(http://127.0.0.1:8000)
-
-Nesta páǵina será exibido uma lista de questoes por usuario e o tipo de questão (Objetiva ou Discursiva)
-
-Como foi adotado o django-admin , para realizar operações CRUD para questoes basta acessar:
-
-(http://127.0.0.1:8000/admin) (interface base)
-
-ou
-
-(http://127.0.0.1:8000/app) (interface rest)
-
-Links para referencia :
 
 [Documentação Oficial](http://www.django-rest-framework.org/)
